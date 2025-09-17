@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page 1 - Input Digits</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="page" id="page1">
+        <h2>Enter Digits</h2>
+        <div class="input-group">
+            <label for="box1">Box 1 (Your Digits):</label>
+            <input type="text" id="box1" maxlength="10" placeholder="e.g., 43051">
+        </div>
+        <div class="input-group">
+            <label for="box2">Box 2 (Remaining Digits):</label>
+            <input type="text" id="box2" readonly>
+        </div>
+        <div class="button-group">
+            <button id="submitBtn">Submit</button>
+            <button id="clearBtn">Clear</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

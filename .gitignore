@@ -1,0 +1,24 @@
+# Dependency directories
+node_modules/
+
+# Capacitor and native platforms
+android/app/build/
+android/app/src/main/assets/capacitor.plugins.json
+android/app/src/main/assets/public
+android/local.properties
+android/.gradle/
+ios/
+wwww/
+
+# macOS-specific files
+.DS_Store
+
+# Editor-specific files
+.vscode/
+.idea/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

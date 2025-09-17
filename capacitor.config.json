@@ -1,0 +1,6 @@
+{
+  "appId": "com.example.calculator",
+  "appName": "calculator",
+  "webDir": "www",
+  "bundledWebRuntime": false
+}
