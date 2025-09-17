@@ -16,7 +16,12 @@ body {
     text-align: center;
 }
 
-.input-group, .button-group {
+.input-group {
+    margin-bottom: 20px;
+}
+
+.button-group {
+    margin-top: 20px;
     margin-bottom: 20px;
 }
 
