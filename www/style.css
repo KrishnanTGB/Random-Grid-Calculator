@@ -53,6 +53,30 @@ button:hover {
     background-color: #0056b3;
 }
 
+#submitBtn {
+    background-color: #0024ff;
+}
+
+#clearBtn {
+    background-color: #e01b1b;
+}
+
+#homeBtn {
+    background-color: red;
+}
+
+#homeBtn:hover, #backBtn:hover, #shuffleBtn:hover {
+    background-color: none;
+}
+
+#shuffleBtn {
+    background-color: green;
+}
+
+#backBtn {
+    background-color: orange;
+}
+
 /* Page 2 specific styles */
 /* #page2 {
     display: none; 

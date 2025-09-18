@@ -21,9 +21,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- Page 1 Logic ---
     if (page1 && box1 && box2 && submitBtn && clearBtn) {
+        // Only allow digit input in Box 1 as user types
+        function filterDigitsInput(e) {
+            let value = box1.value.replace(/[^0-9]/g, '');
+            if (box1.value !== value) {
+                box1.value = value;
+            }
+        }
+
         // Update Box 2 based on Box 1 input
         function updateBox2() {
-            const inputDigits = new Set(box1.value.split('').filter(d => !isNaN(d)));
+            filterDigitsInput();
+            const inputDigits = new Set(box1.value.split(''));
             const allDigits = new Set(['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']);
             const remainingDigits = Array.from(allDigits).filter(d => !inputDigits.has(d)).sort().join('');
             box2.value = remainingDigits;
@@ -35,8 +44,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Handle Submit button click
         submitBtn.addEventListener('click', () => {
-            if (box1.value.length > 0) {
-                concatenatedString = box1.value + box2.value;
+            // Filter out duplicate digits from Box 1 before generating grid
+            let value = box1.value.replace(/[^0-9]/g, '');
+            let unique = '';
+            for (let i = 0; i < value.length; i++) {
+                if (!unique.includes(value[i])) {
+                    unique += value[i];
+                }
+            }
+            if (unique.length > 0) {
+                concatenatedString = unique + box2.value;
                 // Save to localStorage for page2
                 localStorage.setItem('concatenatedString', concatenatedString);
                 // Optionally clear history if you want to reset on new submit
